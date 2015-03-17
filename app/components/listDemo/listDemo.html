@@ -1,0 +1,23 @@
+<div class="row col-md-8 col-md-offset-2" ng-controller="ListDemoController">
+    <h1> Bind stress demo </h1>
+
+    <div class="form-group">
+        <form>
+            <label for="lnth">Enter list length:</label>
+            <input class="form-control" id="lnth" type="number" min="0" ng-model="long"></input>
+        </form>
+    </div>
+
+    <div>Try entering values over 2000... also try with 20.000 or higher</div>
+
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="item in list">
+                <h4> {{ item }} </h4>
+                <h5 ng-if="item % 2 === 0">Even</h5>
+                <h5 ng-if="item % 2">Odd</h5>
+            </li>
+        </ul>
+    </div>
+
+</div>

@@ -36,8 +36,9 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: [
-                    'app/components/**/*.js',
-                    'app/main.js',
+                    'app/components/listDemo/listDemo.module.js',
+                    'app/components/listDemo/listDemo.js',
+                    'app/main.js'
                 ],
                 dest: 'app/dist/js/built.js'
             },
@@ -45,8 +46,8 @@ module.exports = function (grunt) {
                 src: [
                     'bower_components/jquery/dist/jquery.js',
                     'bower_components/bootstrap/dist/js/bootstrap.min.js',
-                    'app/bower_components/angular/angular.js',
-                    'app/bower_components/angular-ui-router/release/angular-ui-router.js'
+                    'bower_components/angular/angular.js',
+                    'bower_components/angular-ui-router/release/angular-ui-router.js'
                 ],
                 dest: 'app/dist/js/libs.js'
             }
