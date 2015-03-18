@@ -9,10 +9,14 @@ controller('ListDemoController', ['$scope', function ($scope) {
     $scope.$watch('long', function (newValue, oldValue) {
         var value = newValue || oldValue;
         var temp = [];
-        for(var i=0; i<value;i++) {
+        for(var i = 0; i < value; i++) {
             temp.push(i);
         }
         $scope.list = temp;
     });
+
+    $scope.add = function (n) {
+        $scope.long += n;
+    };
 
 }]);
