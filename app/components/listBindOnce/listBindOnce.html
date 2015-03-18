@@ -1,0 +1,26 @@
+<div class="col-md-8 col-md-offset-2" ng-controller="ListBOController">
+    <h1> Bind stress demo </h1>
+    <h2> Item list are shown using bind once feature </h2>
+
+    <form>
+        <div class="form-group">
+            <label for="lnth">Enter list length:</label>
+            <input class="form-control" id="lnth" type="number" min="0" ng-model="long"></input>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-default" ng-click="add(1000)">Add 1000</button>
+            <button class="btn btn-default" ng-click="add(10000)">Add 10000</button>
+        </div>
+    </form>
+
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="item in list">
+                <h4> {{ ::item }} </h4>
+                <h5 ng-if="item % 2 === 0">Even</h5>
+                <h5 ng-if="item % 2">Odd</h5>
+            </li>
+        </ul>
+    </div>
+
+</div>

@@ -38,6 +38,8 @@ module.exports = function (grunt) {
                 src: [
                     'app/components/listDemo/listDemo.module.js',
                     'app/components/listDemo/listDemo.js',
+                    'app/components/listBindOnce/listBindOnce.module.js',
+                    'app/components/listBindOnce/listBindOnce.js',
                     'app/main.js'
                 ],
                 dest: 'app/dist/js/built.js'
