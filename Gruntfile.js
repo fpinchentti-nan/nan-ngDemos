@@ -36,6 +36,9 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: [
+                    'app/components/scopeVariableDemo/scopeVariableDemo.module.js',
+                    'app/components/scopeVariableDemo/scopeVariableDemo.js',
+                    'app/components/scopeVariableDemo/childController.js',
                     'app/components/listDemo/listDemo.module.js',
                     'app/components/listDemo/listDemo.js',
                     'app/components/listBindOnce/listBindOnce.module.js',
