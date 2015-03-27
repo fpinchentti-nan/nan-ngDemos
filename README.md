@@ -8,12 +8,9 @@ npm install grunt-cli
 
 * Install grunt dependences before run
 ```
-npm install grunt-contrib-less
-npm install grunt-contrib-connect
-npm install grunt-contrib-jshint
-npm install grunt-contrib-concat
-npm install grunt-contrib-watch 
+npm install
 ```
+All dependencies will be read from package.json
 
 * Run the application
 ```
