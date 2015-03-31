@@ -1,7 +1,7 @@
-var app = angular.module('demo', [ 'listDemo' ,'ui.router' ]);
+var app = angular.module('demo', [ 'listBindOnceDemo' ,'ui.router' ]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/listDemo');
+    $urlRouterProvider.otherwise('/listBO');
 
 }]);

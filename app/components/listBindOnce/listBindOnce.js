@@ -1,6 +1,6 @@
-angular.module('listDemo').
+angular.module('listBindOnceDemo').
 
-controller('ListDemoController', ['$scope', function ($scope) {
+controller('ListBOController', ['$scope', function ($scope) {
 
     $scope.list = [];
 
