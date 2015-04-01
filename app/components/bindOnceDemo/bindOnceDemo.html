@@ -1,0 +1,21 @@
+<div class="row" ng-controller="bindOnceDemoController">
+    <div class="col-md-8 col-md-offset-2">
+        <label for="list">Enter list items: (CSV)</label>
+        <input id="list" ng-model="collection" ng-list>
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+        <h5>One time bind list:</h5>
+        <ul>
+            <li ng-repeat="element in ::collection">{{ ::element }}</li>
+        </ul>
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+        <h5>Regular list:</h5>
+        <ul>
+            <li ng-repeat="element in collection">{{ ::element }}</li>
+        </ul>
+    </div>
+    <div class="col-md-10 col-md-offset-1">
+        See <a href="https://docs.angularjs.org/guide/expression#one-time-binding">angularjs expressions</a>
+    </div>
+</div>
