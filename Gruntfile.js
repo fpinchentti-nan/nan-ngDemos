@@ -36,9 +36,9 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: [
-                    'app/components/scopeVariableDemo/scopeVariableDemo.module.js',
-                    'app/components/scopeVariableDemo/scopeVariableDemo.js',
-                    'app/components/scopeVariableDemo/childController.js',
+                    'app/components/qAllDemo/qAllDemo.module.js',
+                    'app/components/qAllDemo/qAllDemo.js',
+                    'app/components/qAllDemo/qAllDemoController.js',
                     'app/main.js'
                 ],
                 dest: 'app/dist/js/built.js'

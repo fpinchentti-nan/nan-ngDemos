@@ -1,0 +1,25 @@
+<div class="container">
+<div class="row">
+	<hr>
+	<div class="col-md-6">
+		Search
+		<input class="form-control" type="text" ng-model="search" placeholder="City...">
+		<br><br>
+		<center>
+			<i class="fa fa-circle-o-notch fa-spin" ng-show="loading" style="font-size:100px;"></i>
+			<i class="fa fa-check fa-5" ng-show="showOK" style="font-size:100px;"></i>
+		</center>
+		<hr>
+		<h2 ng-show="finishTest">PROMISE "Test Information" resolved</h2><br>
+		<h2 ng-show="finishGoogle">PROMISE "Google Maps" resolved</h2>
+	</div>
+	<div class="col-md-6">
+		Google
+		<textarea class="form-control" heigth="600" ng-model="resultsGoogle"></textarea>
+		Test
+		<textarea class="form-control" heigth="600" ng-model="resultsTest"></textarea>
+		<hr>
+		<button ng-click="submit()" class="btn btn-warning">Get Information</button>
+	</div>
+</div>
+</div>
