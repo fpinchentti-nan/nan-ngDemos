@@ -7,6 +7,7 @@ controller('qAllDemoController', ['$scope', '$http', '$q', function ($scope, $ht
 	$scope.loading = false;
 	$scope.finishTest = false;
 	$scope.finishGoogle = false;
+	$scope.promisesOk = [];
 
 	  $scope.getLocation = function() {
 	  	$scope.finishGoogle = true;
@@ -21,6 +22,7 @@ controller('qAllDemoController', ['$scope', '$http', '$q', function ($scope, $ht
         						return item.formatted_address;
       						});
 	    	$scope.finishGoogle = true;
+	    	$scope.promisesOk.push({name:'LOCATION'});
 	    });
 	  };
 
@@ -37,18 +39,22 @@ controller('qAllDemoController', ['$scope', '$http', '$q', function ($scope, $ht
         						return item.Name;
       						});
 	    	$scope.finishTest = true;
+	    	$scope.promisesOk.push({name:'TEST INFORMATION'});
 	    });
 	  };
 
 	  $scope.submit = function(){
+
 	  	$scope.resultsGoogle = null;
 	  	$scope.resultsTest = null;
+	  	$scope.promisesOk = [];
 	  	promiseList.push($scope.getLocation());
 	  	promiseList.push($scope.getTestInformation());
 
 	  	var ok = function(){
 	  		$scope.showOK = true;
-	  		$scope.loading = false;	
+	  		$scope.loading = false;
+	  		$scope.promisesOk.push({name:'Q ALL'});
 	  	};
 	  	$q.all(promiseList).then(ok);
 	  };

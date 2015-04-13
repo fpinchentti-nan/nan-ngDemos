@@ -10,8 +10,11 @@
 			<i class="fa fa-check fa-5" ng-show="showOK" style="font-size:100px;"></i>
 		</center>
 		<hr>
-		<h2 ng-show="finishTest">PROMISE "Test Information" resolved</h2><br>
-		<h2 ng-show="finishGoogle">PROMISE "Google Maps" resolved</h2>
+<!-- 		<h2 ng-show="finishTest">PROMISE "Test Information" resolved</h2><br>
+		<h2 ng-show="finishGoogle">PROMISE "Google Maps" resolved</h2> -->
+		<h2 ng-repeat="prom in promisesOk">
+			{{prom.name}}
+		</h2>
 	</div>
 	<div class="col-md-6">
 		Google
