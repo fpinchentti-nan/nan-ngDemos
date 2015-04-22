@@ -13,7 +13,7 @@ module.exports = function (grunt) {
         connect: {
             dev: {
                 options: {
-                    port: 3000,
+                    port: 3020,
                     base:'./app/',
                     keepalive:false
                 }
@@ -34,9 +34,8 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: [
-                    'app/components/scopeVariableDemo/scopeVariableDemo.module.js',
-                    'app/components/scopeVariableDemo/scopeVariableDemo.js',
-                    'app/components/scopeVariableDemo/childController.js',
+                    'app/components/interpolate/interpolate.module.js',
+                    'app/components/interpolate/interpolate.js',
                     'app/main.js'
                 ],
                 dest: 'app/dist/js/built.js'
@@ -55,7 +54,7 @@ module.exports = function (grunt) {
         watch: {
             connect: {     // task to watch
                 options: { // Live reload is now specific to this task
-                    livereload: true
+                    livereload: 3021
                 },
                 files: [   // Files to livereload on
                     "**/*.js",
@@ -69,7 +68,7 @@ module.exports = function (grunt) {
                 files: '**/*.less',
                 tasks: ['less'],
                 options: {
-                    livereload: true,
+                    livereload: 3022,
                 },
             }
         }

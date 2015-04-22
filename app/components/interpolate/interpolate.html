@@ -1,0 +1,48 @@
+<div class="row">
+
+	<div class="col-md-8 col-md-offset-2" ng-controller="interpolateDemoController">
+
+		<div>
+			<h2>Switch</h2>
+
+			<h4>Switching over booleans:</h4>
+			<div ng-switch on="mybool">
+				<h5 ng-switch-when="true">Result is true</h5>
+				<h5 ng-switch-when="false">Result is false</h5>
+				<h5 ng-switch-default>Default</h5>
+			</div>
+
+			<h4>Switching over strings:</h4>
+			<input class="form-control" type="text" ng-model="mystring">
+			<div ng-switch on="mystring">
+				<h5 ng-switch-when="one">First case</h5>
+				<h5 ng-switch-when="two">Second case</h5>
+				<h5 ng-switch-default>Default case</h5>
+			</div>
+
+			<h6>Values to match against (the ones after <code>when=""</code>) can't be expressions (will always be treated as literal strings).</h6>
+
+			<a class="pull-right" target="_blank" href="https://code.angularjs.org/1.3.15/docs/api/ng/directive/ngSwitch">angular documentation on switch</a>
+		</div>
+
+		<hr>
+
+		<div>
+			<h2>Iterating an object properties</h2>
+			You can iterate an object like <code>(<_<) myobject | json (~_~)</code> using ng-repeat.
+			<ul class="list-group">
+				<li ng-click="logPosition(key, $event)" class="list-group-item" ng-repeat="(key,value) in myobject" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
+				<!-- The ngClassEven and ngClassOdd directives are just specialization of the more generic ngClass directive. -->
+					Propery number <var>(<_<) $index (~_~)</var> is called <var>(<_<) key (~_~)</var> and has a value of <var>(<_<) value (~_~)</var>
+				</li>
+			</ul>
+			<h6>Instead of an item you have to specify a (key,value) pair.</h6>
+			<h4>Aditionally we are listening to DOM events in the list:</h4>
+			<pre>(<_<) logMessage (~_~)</pre>
+			<h5>A special <a href="https://code.angularjs.org/1.3.15/docs/guide/expression#-event-" target="_blank">$event</a> variable is exposed to some* event handlers. It represents the raw DOM event.</h5>
+			<h6>*ngClick, ngDblClick, ngMousedown, ngMouseup, ngMouseenter, ngMouseleave, ngMousemove, ngMouseover, ngKeydown, ngKeyup, ngKeypress, ngChange</h6>
+		</div>
+
+	</div>
+
+</div>
