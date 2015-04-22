@@ -1,5 +1,3 @@
-// @see http://gruntjs.com/configuring-tasks
-
 module.exports = function (grunt) {
 
     grunt.initConfig({
