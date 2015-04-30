@@ -40,7 +40,7 @@
 			<h6>Instead of an item you have to specify a (key,value) pair.</h6>
 			<h4>Aditionally we are listening to DOM events in the list:</h4>
 			<pre>(<_<) logMessage (~_~)</pre>
-			<h5>A special <a href="https://code.angularjs.org/1.3.15/docs/guide/expression#-event-" target="_blank">$event</a> variable is exposed to some* event handlers. It represents the raw DOM event.</h5>
+			<h5>A special <a href="https://code.angularjs.org/1.3.15/docs/guide/expression#-event-" target="_blank">$event</a> variable is exposed to some* event handlers. It represents the raw DOM event. See browser console to check live.</h5>
 			<h6>*ngClick, ngDblClick, ngMousedown, ngMouseup, ngMouseenter, ngMouseleave, ngMousemove, ngMouseover, ngKeydown, ngKeyup, ngKeypress, ngChange</h6>
 		</div>
 
@@ -49,9 +49,9 @@
 		<div>
 			<h2>Using a custom filter</h2>
 			<label for="pageno">Page number:</label>
-			<input name="pageno" class="form-control" type="text" ng-model="pageNo">
+			<input name="pageno" class="form-control" type="number" ng-model="pageNo">
 			<label for="pagesize">Page size:</label>
-			<input name="pagesize" class="form-control" type="text" ng-model="pageSize">
+			<input name="pagesize" class="form-control" type="number" ng-model="pageSize">
 
 			<ul class="list-group">
 				<li class="list-group-item" ng-repeat="item in filteredCollection = ( mycollection | myfilter:pageNo:pageSize )">

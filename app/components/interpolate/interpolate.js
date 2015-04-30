@@ -15,6 +15,7 @@ controller('interpolateDemoController', ['$scope', function ($scope) {
     $scope.logPosition = function (keyTarget, $event) {
         var message = keyTarget + ' was clicked at: ' + $event.clientX + ',' + $event.clientY;
         $scope.logMessage = message;
+        console.log($event);
     };
 
     $scope.mycollection = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];

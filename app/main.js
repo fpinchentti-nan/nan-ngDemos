@@ -13,6 +13,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
 app.filter('myfilter', function(){
     return function(inputArray, selectedPage, pageSize) {
+        console.log('Selected ',selectedPage, ' of size: ', pageSize);
         var start = selectedPage*pageSize;
         return inputArray.slice(start, start + pageSize);
     };
