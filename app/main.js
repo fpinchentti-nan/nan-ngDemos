@@ -1,8 +1,8 @@
 var app = angular.module('demo', [ 'interpolateDemo' ,'ui.router' ]);
 
 app.config(function($interpolateProvider) {
-      $interpolateProvider.startSymbol('(<_<)');
-      $interpolateProvider.endSymbol('(~_~)');
+    $interpolateProvider.startSymbol('(<_<)');
+    $interpolateProvider.endSymbol('(~_~)');
 });
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
@@ -10,3 +10,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     $urlRouterProvider.otherwise('/interpolateAndSwitchDemo');
 
 }]);
+
+app.filter('myfilter', function(){
+    return function(inputArray, selectedPage, pageSize) {
+        var start = selectedPage*pageSize;
+        return inputArray.slice(start, start + pageSize);
+    };
+});

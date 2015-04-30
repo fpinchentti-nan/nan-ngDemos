@@ -5,21 +5,22 @@
 		<div>
 			<h2>Switch</h2>
 
-			<h4>Switching over booleans:</h4>
+			<h3>Switching over booleans:</h3>
+			<button class="btn btn-default" ng-click="mybool=!mybool">Toggle myboolean</button>
 			<div ng-switch on="mybool">
 				<h5 ng-switch-when="true">Result is true</h5>
 				<h5 ng-switch-when="false">Result is false</h5>
 				<h5 ng-switch-default>Default</h5>
 			</div>
 
-			<h4>Switching over strings:</h4>
+			<h3>Switching over strings:</h3>
 			<input class="form-control" type="text" ng-model="mystring">
 			<div ng-switch on="mystring">
-				<h5 ng-switch-when="one">First case</h5>
-				<h5 ng-switch-when="two">Second case</h5>
-				<h5 ng-switch-default>Default case</h5>
+				<h4 ng-switch-when="one">First case</h4>
+				<h4 ng-switch-when="two">Second case</h4>
+				<h4 ng-switch-default>Default case</h4>
 			</div>
-
+			<h6>Possible values: one, two</h6>
 			<h6>Values to match against (the ones after <code>when=""</code>) can't be expressions (will always be treated as literal strings).</h6>
 
 			<a class="pull-right" target="_blank" href="https://code.angularjs.org/1.3.15/docs/api/ng/directive/ngSwitch">angular documentation on switch</a>
@@ -41,6 +42,22 @@
 			<pre>(<_<) logMessage (~_~)</pre>
 			<h5>A special <a href="https://code.angularjs.org/1.3.15/docs/guide/expression#-event-" target="_blank">$event</a> variable is exposed to some* event handlers. It represents the raw DOM event.</h5>
 			<h6>*ngClick, ngDblClick, ngMousedown, ngMouseup, ngMouseenter, ngMouseleave, ngMousemove, ngMouseover, ngKeydown, ngKeyup, ngKeypress, ngChange</h6>
+		</div>
+
+		<hr>
+
+		<div>
+			<h2>Using a custom filter</h2>
+			<label for="pageno">Page number:</label>
+			<input name="pageno" class="form-control" type="text" ng-model="pageNo">
+			<label for="pagesize">Page size:</label>
+			<input name="pagesize" class="form-control" type="text" ng-model="pageSize">
+
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="item in filteredCollection = ( mycollection | myfilter:pageNo:pageSize )">
+					(<_<) item (~_~)
+				</li>
+			</ul>
 		</div>
 
 	</div>
